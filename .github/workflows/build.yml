@@ -1,0 +1,125 @@
+name: Build AERA recovery (cerro / NX721J)
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: AERA manifest branch
+        default: aera-16.0
+      sync_only:
+        description: Only sync sources (cache check), skip build
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      WORK: /home/runner/aera
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Free disk space and add swap
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache /usr/local/share/boost \
+            /usr/share/swift /opt/microsoft /usr/local/.ghcup /usr/lib/jvm /usr/local/lib/node_modules /usr/local/julia* \
+            /usr/share/miniconda /opt/az /opt/google /opt/pipx /usr/local/share/chromium /usr/local/share/powershell /usr/share/kotlin /usr/lib/mono /usr/lib/llvm-* /var/lib/apt/lists/* /usr/lib/google-cloud-sdk /usr/lib/firefox /usr/local/n
+          sudo docker image prune -af >/dev/null 2>&1 || true
+          sudo apt-get clean
+          sudo swapoff -a || true
+          sudo fallocate -l 4G /mnt/swapfile && sudo chmod 600 /mnt/swapfile
+          sudo mkswap /mnt/swapfile && sudo swapon -p 10 /mnt/swapfile
+          sudo apt-get update -qq && sudo apt-get install -y -qq btrfs-progs linux-modules-extra-$(uname -r) || true
+          # compressed in-RAM swap: soong_build analysis needs more than the 7G runner RAM
+          sudo modprobe zram || true
+          if [ -e /sys/block/zram0 ]; then
+            echo zstd | sudo tee /sys/block/zram0/comp_algorithm >/dev/null || true
+            echo 16G | sudo tee /sys/block/zram0/disksize >/dev/null
+            sudo mkswap /dev/zram0 >/dev/null && sudo swapon -p 100 /dev/zram0
+          fi
+          sudo sysctl -w vm.swappiness=180 vm.page-cluster=0 >/dev/null || true
+          sudo modprobe btrfs || true
+          sudo truncate -s 160G /work.img
+          LOOP=$(sudo losetup -f --show /work.img)
+          sudo mkfs.btrfs -q -f $LOOP
+          sudo mkdir -p $WORK
+          sudo mount -o compress-force=zstd:3,noatime,ssd,discard=async $LOOP $WORK
+          sudo chown $USER:$USER $WORK
+          df -h / $WORK; free -h
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends git curl python3 python-is-python3 \
+            build-essential bc bison flex gperf libxml2-utils lz4 zip unzip rsync \
+            libssl-dev libncurses-dev libelf-dev zlib1g-dev xsltproc fontconfig ccache openjdk-17-jdk-headless
+          mkdir -p ~/bin && curl -sL https://storage.googleapis.com/git-repo-downloads/repo -o ~/bin/repo && chmod +x ~/bin/repo
+          git config --global user.name ci && git config --global user.email ci@example.com
+          git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
+          git config --global color.ui false
+
+      - name: Sync AERA sources
+        working-directory: ${{ env.WORK }}
+        run: |
+          set -o pipefail
+          mkdir -p $WORK/.tmp; export TMPDIR=$WORK/.tmp
+          ( while sleep 30; do echo "[mon] $(date +%T) rootfree $(df -h / | tail -1 | awk '{print $4}') $(free -m | awk '/Mem/{print $7"M avail"}')"; done ) &
+          ~/bin/repo init -u https://github.com/AERA-Recovery/android_manifest -b "${{ inputs.branch }}" --depth=1 --no-clone-bundle
+          mkdir -p .repo/local_manifests
+          cp $GITHUB_WORKSPACE/slim.xml .repo/local_manifests/slim.xml
+          {
+            ~/bin/repo sync -c -j3 --no-tags --no-clone-bundle --force-sync --optimized-fetch --fail-fast || \
+            ~/bin/repo sync -c -j2 --no-tags --no-clone-bundle --force-sync
+          } 2>&1 | tee $GITHUB_WORKSPACE/sync.log
+          df -h / $WORK; sudo btrfs filesystem df $WORK || true
+
+      - name: Add device tree
+        if: ${{ !inputs.sync_only }}
+        run: |
+          mkdir -p $WORK/device/nubia
+          cp -a $GITHUB_WORKSPACE/device/nubia/cerro $WORK/device/nubia/cerro
+          # proprietary vendor files live in a private repo
+          git clone -q --depth 1 "https://x-access-token:${{ secrets.BLOBS_TOKEN }}@github.com/param0/android_device_nubia_cerro-AERA-" /tmp/blobs
+          mkdir -p $WORK/device/nubia/cerro/recovery/root
+          cp -a /tmp/blobs/device/nubia/cerro/recovery/root/vendor $WORK/device/nubia/cerro/recovery/root/vendor
+          rm -rf /tmp/blobs
+
+      - name: Build recovery
+        if: ${{ !inputs.sync_only }}
+        working-directory: ${{ env.WORK }}
+        run: |
+          set +e
+          git clone -q --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" /tmp/logrepo
+          ( cd /tmp/logrepo && git checkout -q --orphan ci-logs && git rm -rqf . >/dev/null 2>&1; \
+            while sleep 120; do
+              { echo "== $(date +%T) root $(df -h / | tail -1 | awk '{print $4}') mem $(free -m | awk '/Mem/{print $7}')M swap $(free -m | awk '/Swap/{print $3}')M"; ps -eo pmem,rss,comm --sort=-rss | head -6; echo; tail -n 120 $GITHUB_WORKSPACE/build.log; } > status.txt 2>&1
+              git add -A && git -c user.name=ci -c user.email=ci@example.com commit -qm "log $(date +%T)" && git push -q -f origin ci-logs 2>/dev/null
+            done ) &
+          export TARGET_RELEASE=bp2a ALLOW_MISSING_DEPENDENCIES=true LC_ALL=C TW_DEVICE_VERSION=aera
+          source build/envsetup.sh
+          lunch twrp_cerro bp2a eng
+          mka adbd recoveryimage -j$(nproc) 2>&1 | tee $GITHUB_WORKSPACE/build.log
+          echo "exit=${PIPESTATUS[0]}"
+          ls -la out/target/product/cerro/*.img || true
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: |
+            build.log
+            sync.log
+          if-no-files-found: ignore
+
+      - name: Upload recovery image
+        if: ${{ !inputs.sync_only }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery-cerro
+          path: /home/runner/aera/out/target/product/cerro/recovery.img
+          if-no-files-found: error
