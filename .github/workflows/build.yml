@@ -72,8 +72,12 @@ jobs:
           mkdir -p .repo/local_manifests
           cp $GITHUB_WORKSPACE/slim.xml .repo/local_manifests/slim.xml
           {
-            ~/bin/repo sync -c -j3 --no-tags --no-clone-bundle --force-sync --optimized-fetch --fail-fast || \
-            ~/bin/repo sync -c -j2 --no-tags --no-clone-bundle --force-sync
+            ok=0
+            for i in 1 2 3 4 5 6; do
+              ~/bin/repo sync -c -j$([ $i -le 1 ] && echo 4 || echo 2) --no-tags --no-clone-bundle --force-sync --optimized-fetch --retry-fetches=3 && { ok=1; break; }
+              echo "sync attempt $i failed (googlesource 503?), sleeping"; sleep $((i*45))
+            done
+            [ $ok = 1 ]
           } 2>&1 | tee $GITHUB_WORKSPACE/sync.log
           df -h / $WORK; sudo btrfs filesystem df $WORK || true
 
