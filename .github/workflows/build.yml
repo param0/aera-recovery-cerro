@@ -101,7 +101,17 @@ jobs:
             done ) &
           export TARGET_RELEASE=bp2a ALLOW_MISSING_DEPENDENCIES=true LC_ALL=C TW_DEVICE_VERSION=aera
           source build/envsetup.sh
-          lunch twrp_cerro bp2a eng
+          # lunch must succeed; auto-strip obsolete board variables (logged) and retry
+          for i in 1 2 3 4 5 6 7 8; do
+            lunch twrp_cerro bp2a eng > $GITHUB_WORKSPACE/lunch.log 2>&1; rc=$?
+            cat $GITHUB_WORKSPACE/lunch.log
+            [ $rc = 0 ] && grep -q '^TARGET_PRODUCT=twrp_cerro' $GITHUB_WORKSPACE/lunch.log && break
+            v=$(grep -oE '[A-Z0-9_]+ is obsolete' $GITHUB_WORKSPACE/lunch.log | head -1 | cut -d' ' -f1)
+            [ -z "$v" ] && { echo "lunch failed, no obsolete var found"; exit 1; }
+            echo "STRIPPING obsolete $v" | tee -a $GITHUB_WORKSPACE/lunch.log
+            sed -i "/^$v[ :+?]*=/d" device/nubia/cerro/*.mk
+          done
+          grep -q '^TARGET_PRODUCT=twrp_cerro' $GITHUB_WORKSPACE/lunch.log || { echo "lunch never succeeded"; exit 1; }
           mka adbd recoveryimage -j$(nproc) 2>&1 | tee $GITHUB_WORKSPACE/build.log
           echo "exit=${PIPESTATUS[0]}"
           ls -la out/target/product/cerro/*.img || true
@@ -113,6 +123,7 @@ jobs:
           name: build-log
           path: |
             build.log
+            lunch.log
             sync.log
           if-no-files-found: ignore
 
