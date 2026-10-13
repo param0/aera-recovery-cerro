@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remove-project name="platform/cts" optional="true"/>
-  <remove-project name="platform/test/vts" optional="true"/>
   <remove-project name="platform/test/mts" optional="true"/>
   <remove-project name="platform/test/dittosuite" optional="true"/>
   <remove-project name="platform/developers/build" optional="true"/>
