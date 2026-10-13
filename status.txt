@@ -1,128 +1,128 @@
-== 21:48:11 root 79G mem 11476M swap 1876M
+== 21:50:13 root 79G mem 11440M swap 1871M
 %MEM   RSS COMMAND
-13.9 2278396 ninja
- 1.0 168984 soong_ui
- 0.7 125588 clang++.real
- 0.6 114324 provjobd2379771
- 0.6 99400 clang++.real
+13.9 2286416 ninja
+ 1.8 305692 clang++.real
+ 1.6 269200 clang++.real
+ 1.0 171664 soong_ui
+ 0.7 115764 provjobd2379771
 
-/home/runner/aera/out/soong/.intermediates/system/update_engine/update_metadata-protos/android_recovery_arm64_armv8-2a-dotprod_static/gen/proto/update_engine/update_metadata.pb.h:936:3: note: 'BSDIFF' has been explicitly marked deprecated here
-  936 |   PROTOBUF_DEPRECATED_ENUM static constexpr Type BSDIFF =
-      |   ^
-external/protobuf/src/google/protobuf/port_def.inc:354:50: note: expanded from macro 'PROTOBUF_DEPRECATED_ENUM'
-  354 | # define PROTOBUF_DEPRECATED_ENUM __attribute__((deprecated))
-      |                                                  ^
-1 warning generated.
-[ 56% 14548/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/payload_constants.cc (priority: 13)
-system/update_engine/payload_consumer/payload_constants.cc:77:28: warning: 'BSDIFF' is deprecated [-Wdeprecated-declarations]
-   77 |     case InstallOperation::BSDIFF:
+[ 62% 15909/25640] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_message.cpp (priority: 12)
+[ 62% 15910/25640] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_screen_timer.cpp (priority: 12)
+[ 62% 15911/25640] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_terminal.cpp (priority: 12)
+[ 62% 15912/25640] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_xml_support.cpp (priority: 12)
+[ 62% 15913/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/alpha_dec.c (priority: 12)
+[ 62% 15914/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/buffer_dec.c (priority: 12)
+[ 62% 15915/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/frame_dec.c (priority: 12)
+[ 62% 15916/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/idec_dec.c (priority: 12)
+[ 62% 15917/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/io_dec.c (priority: 12)
+[ 62% 15918/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/quant_dec.c (priority: 12)
+[ 62% 15919/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/tree_dec.c (priority: 12)
+[ 62% 15920/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/vp8_dec.c (priority: 12)
+[ 62% 15921/25640] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_ui_host.cpp (priority: 12)
+[ 62% 15922/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/webp_dec.c (priority: 12)
+[ 62% 15923/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/alpha_processing.c (priority: 12)
+[ 62% 15924/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/vp8l_dec.c (priority: 12)
+[ 62% 15925/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/cpu.c (priority: 12)
+[ 62% 15926/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/alpha_processing_neon.c (priority: 12)
+[ 62% 15927/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec_clip_tables.c (priority: 12)
+[ 62% 15928/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec.c (priority: 12)
+[ 62% 15929/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/filters.c (priority: 12)
+[ 62% 15930/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/filters_neon.c (priority: 12)
+[ 62% 15931/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec_neon.c (priority: 12)
+[ 62% 15932/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/lossless.c (priority: 12)
+[ 62% 15933/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/rescaler.c (priority: 12)
+[ 62% 15934/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/lossless_neon.c (priority: 12)
+[ 62% 15935/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/upsampling.c (priority: 12)
+[ 62% 15936/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/yuv.c (priority: 12)
+[ 62% 15937/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/upsampling_neon.c (priority: 12)
+[ 62% 15938/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/yuv_neon.c (priority: 12)
+[ 62% 15939/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/color_cache_utils.c (priority: 12)
+[ 62% 15940/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/bit_reader_utils.c (priority: 12)
+[ 62% 15941/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/filters_utils.c (priority: 12)
+[ 62% 15942/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/huffman_utils.c (priority: 12)
+[ 62% 15943/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/quant_levels_dec_utils.c (priority: 12)
+[ 62% 15944/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/palette.c (priority: 12)
+[ 62% 15945/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/random_utils.c (priority: 12)
+[ 62% 15946/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/rescaler_utils.c (priority: 12)
+[ 62% 15947/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/thread_utils.c (priority: 12)
+[ 62% 15948/25640] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/utils.c (priority: 12)
+[ 62% 15949/25640] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_backend.cpp (priority: 12)
+[ 62% 15950/25640] //bootable/recovery/aeraui:libaeraui clang++ components/matrix_engraving.cpp (priority: 12)
+[ 62% 15951/25640] //bootable/recovery/aeraui:libaeraui clang++ components/picture_decode.cpp (priority: 12)
+[ 62% 15952/25640] //bootable/recovery/aeraui:libaeraui clang++ components/android_icon.cpp (priority: 12)
+[ 62% 15953/25640] //bootable/recovery/aeraui:libaeraui clang++ components/picture_viewer.cpp (priority: 12)
+[ 62% 15954/25640] //bootable/recovery/aeraui:libaeraui clang++ components/power_transition.cpp (priority: 12)
+[ 62% 15955/25640] //bootable/recovery/aeraui:libaeraui clang++ components/retroarch_icon.cpp (priority: 12)
+[ 62% 15956/25640] //bootable/recovery/aeraui:libaeraui clang++ components/aera_logo.cpp (priority: 12)
+[ 62% 15957/25640] //bootable/recovery/aeraui:libaeraui clang++ components/text_edit.cpp (priority: 12)
+[ 62% 15958/25640] //bootable/recovery/aeraui:libaeraui clang++ components/wallpaper.cpp (priority: 12)
+[ 62% 15959/25640] //bootable/recovery/aeraui:libaeraui clang++ components/webkit_icon.cpp (priority: 12)
+[ 62% 15960/25640] //bootable/recovery/aeraui:libaeraui clang++ core/gpu_renderer.cpp (priority: 12)
+[ 62% 15961/25640] //bootable/recovery/aeraui:libaeraui clang++ core/runner.cpp (priority: 12)
+[ 62% 15962/25640] //bootable/recovery/aeraui:libaeraui clang++ core/status_bar.cpp (priority: 12)
+[ 62% 15963/25640] //bootable/recovery/aeraui:libaeraui clang++ features/backup/android_packages_xml.cpp (priority: 12)
+[ 62% 15964/25640] //system/core/init:init_second_stage.recovery link init (priority: 12)
+[ 62% 15965/25640] //bootable/recovery/aeraui:libaeraui clang++ core/engine.cpp (priority: 12)
+[ 62% 15966/25640] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration.cpp (priority: 12)
+[ 62% 15967/25640] //bootable/recovery/aeraui:libaeraui clang++ features/browser/launcher.cpp (priority: 12)
+[ 62% 15968/25640] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration_io.cpp (priority: 12)
+[ 62% 15969/25640] //bootable/recovery/aeraui:libaeraui clang++ features/backup/incremental_apks.cpp (priority: 12)
+[ 62% 15970/25640] //bootable/recovery/aeraui:libaeraui clang++ features/browser/runtime.cpp (priority: 12)
+[ 62% 15971/25640] //bootable/recovery/aeraui:libaeraui clang++ features/browser/session.cpp (priority: 12)
+[ 62% 15972/25640] //bootable/recovery/aeraui:libaeraui clang++ features/doom/session.cpp (priority: 12)
+[ 62% 15973/25640] //bootable/recovery/aeraui:libaeraui clang++ features/doom/launcher.cpp (priority: 12)
+[ 62% 15974/25640] //bootable/recovery/aeraui:libaeraui clang++ features/media/session.cpp (priority: 12)
+[ 62% 15975/25640] //bootable/recovery/aeraui:libaeraui clang++ features/media/launcher.cpp (priority: 12)
+[ 62% 15976/25640] //bootable/recovery/aeraui:libaeraui clang++ features/files/file_manager.cpp (priority: 12)
+[ 62% 15977/25640] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/session.cpp (priority: 12)
+[ 62% 15978/25640] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/launcher.cpp (priority: 12)
+[ 62% 15979/25640] //bootable/recovery/aeraui:libaeraui clang++ features/browser/web_scene.cpp (priority: 12)
+[ 62% 15980/25640] //bootable/recovery/aeraui:libaeraui clang++ features/nas/smb_browser.cpp (priority: 12)
+[ 62% 15981/25640] //bootable/recovery/aeraui:libaeraui clang++ features/plugins/store_metadata.cpp (priority: 12)
+[ 62% 15982/25640] //bootable/recovery/aeraui:libaeraui clang++ features/plugins/plugin_manager.cpp (priority: 12)
+[ 62% 15983/25640] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_arb.cpp (priority: 12)
+[ 62% 15984/25640] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_inspector.cpp (priority: 12)
+bootable/recovery/aeraui/features/update/payload_inspector.cpp:123:28: warning: 'MOVE' is deprecated [-Wdeprecated-declarations]
+  123 |     case InstallOperation::MOVE: return "move";
       |                            ^
-/home/runner/aera/out/soong/.intermediates/system/update_engine/update_metadata-protos/android_recovery_arm64_armv8-2a-dotprod_static/gen/proto/update_engine/update_metadata.pb.h:936:3: note: 'BSDIFF' has been explicitly marked deprecated here
-  936 |   PROTOBUF_DEPRECATED_ENUM static constexpr Type BSDIFF =
-      |   ^
-external/protobuf/src/google/protobuf/port_def.inc:354:50: note: expanded from macro 'PROTOBUF_DEPRECATED_ENUM'
-  354 | # define PROTOBUF_DEPRECATED_ENUM __attribute__((deprecated))
-      |                                                  ^
-system/update_engine/payload_consumer/payload_constants.cc:78:28: warning: 'MOVE' is deprecated [-Wdeprecated-declarations]
-   78 |     case InstallOperation::MOVE:
-      |                            ^
-/home/runner/aera/out/soong/.intermediates/system/update_engine/update_metadata-protos/android_recovery_arm64_armv8-2a-dotprod_static/gen/proto/update_engine/update_metadata.pb.h:934:3: note: 'MOVE' has been explicitly marked deprecated here
+/home/runner/aera/out/soong/.intermediates/system/update_engine/update_metadata-protos/android_arm64_armv8-2a-dotprod_static/gen/proto/update_engine/update_metadata.pb.h:934:3: note: 'MOVE' has been explicitly marked deprecated here
   934 |   PROTOBUF_DEPRECATED_ENUM static constexpr Type MOVE =
       |   ^
 external/protobuf/src/google/protobuf/port_def.inc:354:50: note: expanded from macro 'PROTOBUF_DEPRECATED_ENUM'
   354 | # define PROTOBUF_DEPRECATED_ENUM __attribute__((deprecated))
       |                                                  ^
+bootable/recovery/aeraui/features/update/payload_inspector.cpp:124:28: warning: 'BSDIFF' is deprecated [-Wdeprecated-declarations]
+  124 |     case InstallOperation::BSDIFF: return "bsdiff";
+      |                            ^
+/home/runner/aera/out/soong/.intermediates/system/update_engine/update_metadata-protos/android_arm64_armv8-2a-dotprod_static/gen/proto/update_engine/update_metadata.pb.h:936:3: note: 'BSDIFF' has been explicitly marked deprecated here
+  936 |   PROTOBUF_DEPRECATED_ENUM static constexpr Type BSDIFF =
+      |   ^
+external/protobuf/src/google/protobuf/port_def.inc:354:50: note: expanded from macro 'PROTOBUF_DEPRECATED_ENUM'
+  354 | # define PROTOBUF_DEPRECATED_ENUM __attribute__((deprecated))
+      |                                                  ^
 2 warnings generated.
-[ 56% 14549/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/install_plan.cc (priority: 13)
-[ 56% 14550/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/payload_metadata.cc (priority: 13)
-[ 56% 14551/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/payload_verifier.cc (priority: 13)
-[ 56% 14552/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/partition_writer.cc (priority: 13)
-[ 56% 14553/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/partition_writer_factory_android.cc (priority: 13)
-[ 56% 14554/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/vabc_partition_writer.cc (priority: 13)
-[ 56% 14555/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/xor_extent_writer.cc (priority: 13)
-[ 56% 14556/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/snapshot_extent_writer.cc (priority: 13)
-[ 56% 14557/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/block_extent_writer.cc (priority: 13)
-[ 56% 14558/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/verified_source_fd.cc (priority: 13)
-[ 56% 14559/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/postinstall_runner_action.cc (priority: 13)
-[ 56% 14560/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/xz_extent_writer.cc (priority: 13)
-[ 56% 14561/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/verity_writer_android.cc (priority: 13)
-[ 56% 14562/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/fec_file_descriptor.cc (priority: 13)
-[ 56% 14563/25640] //system/update_engine:libpayload_consumer clang++ update_status_utils.cc (priority: 13)
-[ 56% 14564/25640] //system/update_engine:libpayload_consumer clang++ payload_consumer/partition_update_generator_android.cc (priority: 13)
-[ 56% 14565/25640] //external/pcre:libpcre2 clang src/pcre2_auto_possess.c (priority: 13)
-[ 56% 14566/25640] //external/pcre:libpcre2 clang src/pcre2_chartables.c (priority: 13)
-[ 56% 14567/25640] //external/pcre:libpcre2 clang src/pcre2_chkdint.c (priority: 13)
-[ 56% 14568/25640] //external/pcre:libpcre2 clang src/pcre2_config.c (priority: 13)
-[ 56% 14569/25640] //system/update_engine:libpayload_extent_ranges clang++ payload_generator/extent_ranges.cc (priority: 13)
-[ 56% 14570/25640] //external/pcre:libpcre2 clang src/pcre2_context.c (priority: 13)
-[ 56% 14571/25640] //system/update_engine:libpayload_extent_utils clang++ payload_generator/extent_utils.cc (priority: 13)
-[ 56% 14572/25640] //external/pcre:libpcre2 clang src/pcre2_error.c (priority: 13)
-[ 56% 14573/25640] //external/pcre:libpcre2 clang src/pcre2_convert.c (priority: 13)
-[ 56% 14574/25640] //external/pcre:libpcre2 clang src/pcre2_extuni.c (priority: 13)
-[ 56% 14575/25640] //external/pcre:libpcre2 clang src/pcre2_find_bracket.c (priority: 13)
-[ 56% 14576/25640] //external/pcre:libpcre2 clang src/pcre2_jit_compile.c (priority: 13)
-[ 56% 14577/25640] //external/pcre:libpcre2 clang src/pcre2_maketables.c (priority: 13)
-[ 56% 14578/25640] //external/pcre:libpcre2 clang src/pcre2_match_data.c (priority: 13)
-[ 56% 14579/25640] //external/pcre:libpcre2 clang src/pcre2_newline.c (priority: 13)
-[ 56% 14580/25640] //external/pcre:libpcre2 clang src/pcre2_dfa_match.c (priority: 13)
-[ 56% 14581/25640] //external/pcre:libpcre2 clang src/pcre2_ord2utf.c (priority: 13)
-[ 56% 14582/25640] //external/pcre:libpcre2 clang src/pcre2_pattern_info.c (priority: 13)
-[ 56% 14583/25640] //external/pcre:libpcre2 clang src/pcre2_compile.c (priority: 13)
-[ 56% 14584/25640] //external/pcre:libpcre2 clang src/pcre2_script_run.c (priority: 13)
-[ 56% 14585/25640] //external/pcre:libpcre2 clang src/pcre2_serialize.c (priority: 13)
-[ 56% 14586/25640] //external/pcre:libpcre2 clang src/pcre2_string_utils.c (priority: 13)
-[ 56% 14587/25640] //external/pcre:libpcre2 clang src/pcre2_substring.c (priority: 13)
-[ 56% 14588/25640] //external/pcre:libpcre2 clang src/pcre2_substitute.c (priority: 13)
-[ 56% 14589/25640] //external/pcre:libpcre2 clang src/pcre2_study.c (priority: 13)
-[ 56% 14590/25640] //external/pcre:libpcre2 clang src/pcre2_tables.c (priority: 13)
-[ 56% 14591/25640] //external/pcre:libpcre2 clang src/pcre2_valid_utf.c (priority: 13)
-[ 56% 14592/25640] //external/pcre:libpcre2 clang src/pcre2_ucd.c (priority: 13)
-[ 56% 14593/25640] //external/pcre:libpcre2 clang src/pcre2_xclass.c (priority: 13)
-[ 56% 14594/25640] //system/core/libprocessgroup/setup:libprocessgroup_setup generate toc libprocessgroup_setup.so (priority: 13)
-[ 56% 14595/25640] //system/core/libprocessgroup:libprocessgroup strip libprocessgroup.so (priority: 13)
-[ 56% 14596/25640] //external/perfetto:libperfetto_c strip libperfetto_c.so (priority: 13)
-[ 56% 14597/25640] //system/core/libprocessgroup/util:libprocessgroup_util clang++ cgroup_controller.cpp (priority: 13)
-[ 56% 14598/25640] //system/core/libprocessgroup/util:libprocessgroup_util clang++ cgroup_descriptor.cpp (priority: 13)
-[ 56% 14599/25640] //system/core/property_service/libpropertyinfoparser:libpropertyinfoparser static link libpropertyinfoparser.a (priority: 13)
-[ 56% 14600/25640] //system/core/property_service/libpropertyinfoparser:libpropertyinfoparser clang++ property_info_parser.cpp (priority: 13)
-[ 56% 14601/25640] //system/core/property_service/libpropertyinfoparser:libpropertyinfoparser static link libpropertyinfoparser.a (priority: 13)
-[ 56% 14602/25640] //system/core/property_service/libpropertyinfoserializer:libpropertyinfoserializer static link libpropertyinfoserializer.a (priority: 13)
-[ 56% 14603/25640] //system/libprocinfo:libprocinfo clang++ process.cpp (priority: 13)
-[ 56% 14604/25640] //external/pcre:libpcre2 clang src/pcre2_match.c (priority: 13)
-[ 56% 14605/25640] //system/core/libprocessgroup/util:libprocessgroup_util clang++ util.cpp (priority: 13)
-[ 56% 14606/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arenaz_sampler.cc (priority: 13)
-[ 56% 14607/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/any_lite.cc (priority: 13)
-[ 56% 14608/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arena.cc (priority: 13)
-[ 56% 14609/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/arenastring.cc (priority: 13)
-[ 56% 14610/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_enum_util.cc (priority: 13)
-[ 56% 14611/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_message_tctable_lite.cc (priority: 13)
-[ 56% 14612/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/generated_message_util.cc (priority: 13)
-[ 56% 14613/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/extension_set.cc (priority: 13)
-[ 56% 14614/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/io_win32.cc (priority: 13)
-[ 57% 14615/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/implicit_weak_message.cc (priority: 13)
-[ 57% 14616/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/inlined_string_field.cc (priority: 13)
-[ 57% 14617/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/strtod.cc (priority: 13)
-[ 57% 14618/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream.cc (priority: 13)
-[ 57% 14619/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/coded_stream.cc (priority: 13)
-[ 57% 14620/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream_impl.cc (priority: 13)
-[ 57% 14621/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/io/zero_copy_stream_impl_lite.cc (priority: 13)
-[ 57% 14622/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/map.cc (priority: 13)
-[ 57% 14623/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/message_lite.cc (priority: 13)
-[ 57% 14624/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/repeated_ptr_field.cc (priority: 13)
-[ 57% 14625/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/parse_context.cc (priority: 13)
-[ 57% 14626/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/bytestream.cc (priority: 13)
-[ 57% 14627/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/repeated_field.cc (priority: 13)
-[ 57% 14628/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/common.cc (priority: 13)
-[ 57% 14629/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/int128.cc (priority: 13)
-[ 57% 14630/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/status.cc (priority: 13)
-[ 57% 14631/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/statusor.cc (priority: 13)
-[ 57% 14632/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/stringpiece.cc (priority: 13)
-[ 57% 14633/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/structurally_valid.cc (priority: 13)
-[ 57% 14634/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/stringprintf.cc (priority: 13)
-[ 57% 14635/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/strutil.cc (priority: 13)
-[ 57% 14636/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/stubs/time.cc (priority: 13)
-[ 57% 14637/25640] //external/protobuf:libprotobuf-cpp-lite clang++ src/google/protobuf/wire_format_lite.cc (priority: 13)
-[ 57% 14638/25640] //external/puffin:libpuffpatch clang++ proto/external/puffin/puffin/src/puffin.pb.cc (priority: 13)
-[ 57% 14639/25640] //external/puffin:libpuffpatch clang++ src/bit_reader.cc (priority: 13)
-[ 57% 14640/25640] //external/puffin:libpuffpatch clang++ src/bit_writer.cc (priority: 13)
-[ 57% 14641/25640] //external/puffin:libpuffpatch clang++ src/brotli_util.cc (priority: 13)
+[ 62% 15985/25640] //bootable/recovery/aeraui:libaeraui clang++ features/retroarch/launcher.cpp (priority: 12)
+[ 62% 15986/25640] //bootable/recovery/aeraui:libaeraui clang++ features/recorder/service.cpp (priority: 12)
+[ 62% 15987/25640] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_targets.cpp (priority: 12)
+[ 62% 15988/25640] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_extract.cpp (priority: 12)
+[ 62% 15989/25640] //bootable/recovery/aeraui:libaeraui clang++ features/retroarch/session.cpp (priority: 12)
+[ 62% 15990/25640] //bootable/recovery/aeraui:libaeraui clang++ features/streams/session.cpp (priority: 12)
+[ 62% 15991/25640] //bootable/recovery/aeraui:libaeraui clang++ features/streams/launcher.cpp (priority: 12)
+[ 62% 15992/25640] //bootable/recovery/aeraui:libaeraui clang++ features/streams/query.cpp (priority: 12)
+[ 62% 15993/25640] //bootable/recovery/aeraui:libaeraui clang++ features/telegram/launcher.cpp (priority: 12)
+[ 62% 15994/25640] //bootable/recovery/aeraui:libaeraui clang++ localization/catalog/catalog_generated.cpp (priority: 12)
+[ 62% 15995/25640] //bootable/recovery/aeraui:libaeraui clang++ features/root/root_manager.cpp (priority: 12)
+[ 62% 15996/25640] //bootable/recovery/aeraui:libaeraui clang++ localization/catalog/catalog.cpp (priority: 12)
+[ 62% 15997/25640] //bootable/recovery/aeraui:libaeraui clang++ features/update/update_manager.cpp (priority: 12)
+[ 62% 15998/25640] //bootable/recovery/aeraui:libaeraui clang++ localization/i18n.cpp (priority: 12)
+[ 62% 15999/25640] //bootable/recovery/aeraui:libaeraui clang++ localization/fonts/aera_fallback.cpp (priority: 12)
+[ 62% 16000/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/about_scene.cpp (priority: 12)
+[ 62% 16001/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/browser_scene.cpp (priority: 12)
+[ 62% 16002/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/decrypt_scene.cpp (priority: 12)
+[ 62% 16003/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/boot_scene.cpp (priority: 12)
+[ 62% 16004/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/doom_scene.cpp (priority: 12)
+[ 62% 16005/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/gallery_scene.cpp (priority: 12)
+[ 62% 16006/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/fastboot_scene.cpp (priority: 12)
+[ 62% 16007/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/generic_plugin_scene.cpp (priority: 12)
+[ 62% 16008/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/lock_scene.cpp (priority: 12)
+[ 62% 16009/25640] //bootable/recovery/aeraui:libaeraui clang++ scenes/launcher_scene.cpp (priority: 12)
