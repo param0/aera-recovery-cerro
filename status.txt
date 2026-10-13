@@ -1,34 +1,11 @@
-== 21:19:49 root 81G mem 837M swap 8112M
+== 21:21:51 root 81G mem 6550M swap 204M
 %MEM   RSS COMMAND
-80.4 13169304 soong_build
- 0.6 98404 provjobd2379771
+48.9 8009444 ckati
+ 0.8 143524 provjobd2379771
  0.2 43684 multipathd
- 0.2 41684 Runner.Worker
- 0.1 22380 python3
+ 0.2 37940 Runner.Listener
+ 0.1 31240 Runner.Worker
 
-[  8% 11/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-depset/pkg/github.com/google/blueprint/depset.a
-[  9% 12/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-pathtools/pkg/github.com/google/blueprint/pathtools.a
-[  9% 13/131] compile /home/runner/aera/out/host/linux-x86/bin/go/go-cmp-internal-diff/pkg/github.com/google/go-cmp/cmp/internal/diff.a
-[ 10% 14/131] compile /home/runner/aera/out/host/linux-x86/bin/go/go-cmp-internal-function/pkg/github.com/google/go-cmp/cmp/internal/function.a
-[ 11% 15/131] compile /home/runner/aera/out/host/linux-x86/bin/go/go-cmp-internal-testprotos/pkg/github.com/google/go-cmp/cmp/internal/testprotos.a
-[ 12% 16/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-detrand/pkg/google.golang.org/protobuf/internal/detrand.a
-[ 12% 17/131] compile /home/runner/aera/out/host/linux-x86/bin/go/go-cmp-internal-value/pkg/github.com/google/go-cmp/cmp/internal/value.a
-[ 13% 18/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-android/pkg/google.golang.org/protobuf/android.a
-[ 14% 19/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-flags/pkg/google.golang.org/protobuf/internal/flags.a
-[ 15% 20/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-errors/pkg/google.golang.org/protobuf/internal/errors.a
-[ 16% 21/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-pragma/pkg/google.golang.org/protobuf/internal/pragma.a
-[ 16% 22/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-set/pkg/google.golang.org/protobuf/internal/set.a
-[ 17% 23/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-parser/pkg/github.com/google/blueprint/parser.a
-[ 18% 24/131] compile /home/runner/aera/out/host/linux-x86/bin/go/go-cmp-internal-teststructs/pkg/github.com/google/go-cmp/cmp/internal/teststructs.a
-[ 19% 25/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-encoding-protowire/pkg/google.golang.org/protobuf/encoding/protowire.a
-[ 19% 26/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-version/pkg/google.golang.org/protobuf/internal/version.a
-[ 20% 27/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-bpmodify/pkg/github.com/google/blueprint/bpmodify.a
-[ 21% 28/131] compile /home/runner/aera/out/host/linux-x86/bin/go/loadplugins/obj/loadplugins.a
-[ 22% 29/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-reflect-protoreflect/pkg/google.golang.org/protobuf/reflect/protoreflect.a
-[ 22% 30/131] link /home/runner/aera/out/host/linux-x86/bin/go/loadplugins/obj/loadplugins
-[ 23% 31/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-descopts/pkg/google.golang.org/protobuf/internal/descopts.a
-[ 24% 32/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-descfmt/pkg/google.golang.org/protobuf/internal/descfmt.a
-[ 25% 33/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-genid/pkg/google.golang.org/protobuf/internal/genid.a
 [ 25% 34/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-messageset/pkg/google.golang.org/protobuf/internal/encoding/messageset.a
 [ 26% 35/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-strs/pkg/google.golang.org/protobuf/internal/strs.a
 [ 27% 36/131] compile /home/runner/aera/out/host/linux-x86/bin/go/go-cmp/pkg/github.com/google/go-cmp/cmp.a
@@ -126,3 +103,26 @@
 [ 97% 128/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
 [ 98% 129/131] link /home/runner/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build
 [ 99% 130/131] cp /home/runner/aera/out/host/linux-x86/bin/soong_build
+[100% 131/131] analyzing Android.bp files and generating ninja file at /home/runner/aera/out/soong/build.twrp_cerro.ninja
+Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
+Warning: Module 'androidx.test.uiautomator_uiautomator' depends on non-existing optional_uses_libs 'com.android.extensions.xr'
+Warning: Module 'androidx.wear_wear' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.compose_compose-foundation' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface' depends on non-existing optional_uses_libs 'wear-sdk'
+/home/runner/aera/out/build-twrp_cerro-cleanspec.ninja is missing, regenerating...
+/home/runner/aera/out/build-twrp_cerro.ninja is missing, regenerating...
+[100% 132/132] initializing legacy Make module parser ...
+[ 92% 133/144] including /home/runner/aera/out/soong/installs-twrp_cerro.mk ...
+[ 93% 134/144] including /home/runner/aera/out/soong/Android-twrp_cerro.mk ...
+[ 93% 135/144] including build/make/target/board/android-info.mk ...
+[ 94% 136/144] including art/Android.mk ...
+[ 95% 137/144] including bootable/recovery/Android.mk ...
+bootable/recovery/prebuilt/Android.mk:486: warning: vendor_hw:  bootable/recovery/prebuilt/relink.sh /home/runner/aera/out/target/product/cerro/recovery/root/vendor/bin/hw 
+[ 95% 138/144] including device/qcom/twrp-common/Android.mk ...
+[ 96% 139/144] including external/magisk-prebuilt/Android.mk ...
+[ 97% 140/144] including hardware/qcom/wlan/Android.mk ...
+[ 97% 141/144] including vendor/twrp/Android.mk ...
+[ 98% 142/144] including /home/runner/aera/out/soong/late-twrp_cerro.mk ...
+[ 99% 143/144] finishing legacy Make module parsing ...
