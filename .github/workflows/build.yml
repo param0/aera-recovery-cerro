@@ -103,6 +103,9 @@ jobs:
               { echo "== $(date +%T) root $(df -h / | tail -1 | awk '{print $4}') mem $(free -m | awk '/Mem/{print $7}')M swap $(free -m | awk '/Swap/{print $3}')M"; ps -eo pmem,rss,comm --sort=-rss | head -6; echo; tail -n 120 $GITHUB_WORKSPACE/build.log; } > status.txt 2>&1
               git add -A && git -c user.name=ci -c user.email=ci@example.com commit -qm "log $(date +%T)" && git push -q -f origin ci-logs 2>/dev/null
             done ) &
+          # test-suite packaging (cts/vts/catbox) breaks on this tree and is irrelevant for recovery
+          grep -rl --include='*.mk' 'tools/compatibility.mk' build/make/core/tasks test tools 2>/dev/null | tee /tmp/compat_users.txt | xargs -r rm -f
+          cat /tmp/compat_users.txt
           export TARGET_RELEASE=bp2a ALLOW_MISSING_DEPENDENCIES=true LC_ALL=C TW_DEVICE_VERSION=aera
           source build/envsetup.sh
           # lunch must succeed; auto-strip obsolete board variables (logged) and retry
