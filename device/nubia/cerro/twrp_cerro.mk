@@ -15,3 +15,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += ro.bootimage.build.date.utc=0
 
+
+# no kernel in this tree: skip kernel-version VINTF extraction
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+PRODUCT_ENFORCE_VINTF_MANIFEST := false
