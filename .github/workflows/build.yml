@@ -106,6 +106,9 @@ jobs:
           # test-suite packaging (cts/vts/catbox) breaks on this tree and is irrelevant for recovery
           grep -rl --include='*.mk' 'tools/compatibility.mk' build/make/core/tasks test tools 2>/dev/null | tee /tmp/compat_users.txt | xargs -r rm -f
           cat /tmp/compat_users.txt
+          ( cd build/make/core/tasks && rm -fv catbox.mk csuite.mk cts*.mk mcts.mk mts.mk sts.mk wvts.mk dts.mk vts-core-tests.mk \
+              prebuilt_tradefed.mk tradefed-tests-list.mk general-tests.mk host-unit-tests.mk device-tests.mk art-host-tests.mk \
+              automotive-*.mk performance-tests.mk device-platinum-tests.mk berberis_test.mk )
           export TARGET_RELEASE=bp2a ALLOW_MISSING_DEPENDENCIES=true LC_ALL=C TW_DEVICE_VERSION=aera
           source build/envsetup.sh
           # lunch must succeed; auto-strip obsolete board variables (logged) and retry
