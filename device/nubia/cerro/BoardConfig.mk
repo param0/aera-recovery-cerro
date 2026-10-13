@@ -10,6 +10,8 @@ TARGET_BOARD_PLATFORM := pineapple
 TARGET_BOOTLOADER_BOARD_NAME := pineapple
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := false
+# no kernel build: recovery is ramdisk-only
+TARGET_NO_KERNEL_OVERRIDE := true
 
 # A/B + dynamic partitions
 AB_OTA_UPDATER := true
