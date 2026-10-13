@@ -1,128 +1,128 @@
-== 21:21:51 root 81G mem 6550M swap 204M
+== 21:23:53 root 81G mem 9547M swap 178M
 %MEM   RSS COMMAND
-48.9 8009444 ckati
- 0.8 143524 provjobd2379771
- 0.2 43684 multipathd
- 0.2 37940 Runner.Listener
- 0.1 31240 Runner.Worker
+24.4 4005344 ninja
+ 3.7 606556 rustc
+ 0.8 138368 clang++.real
+ 0.6 111828 provjobd2379771
+ 0.5 97064 rustc
 
-[ 25% 34/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-messageset/pkg/google.golang.org/protobuf/internal/encoding/messageset.a
-[ 26% 35/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-strs/pkg/google.golang.org/protobuf/internal/strs.a
-[ 27% 36/131] compile /home/runner/aera/out/host/linux-x86/bin/go/go-cmp/pkg/github.com/google/go-cmp/cmp.a
-[ 28% 37/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-reflect-protoregistry/pkg/google.golang.org/protobuf/reflect/protoregistry.a
-[ 29% 38/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-runtime-protoiface/pkg/google.golang.org/protobuf/runtime/protoiface.a
-[ 29% 39/131] cp /home/runner/aera/out/host/linux-x86/bin/loadplugins
-[ 30% 40/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-order/pkg/google.golang.org/protobuf/internal/order.a
-[ 31% 41/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-android-allowlists/pkg/android/soong/android/allowlists.a
-[ 32% 42/131] write /home/runner/aera/out/host/linux-x86/bin/go/soong-cc/pkg/android/soong/cc.a.embedcfg
-[ 32% 43/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-text/pkg/google.golang.org/protobuf/internal/encoding/text.a
-[ 33% 44/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-remoteexec/pkg/android/soong/remoteexec.a
-[ 34% 45/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-defval/pkg/google.golang.org/protobuf/internal/encoding/defval.a
-[ 35% 46/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-response/pkg/android/soong/response.a
-[ 35% 47/131] create /home/runner/aera/out/host/linux-x86/bin/go/soong_build/gen/plugin.go
-[ 36% 48/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-starlark-format/pkg/android/soong/starlark_fmt.a
-[ 37% 49/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-proptools/pkg/github.com/google/blueprint/proptools.a
-[ 38% 50/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-proto/pkg/google.golang.org/protobuf/proto.a
-[ 38% 51/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-shared/pkg/android/soong/shared.a
-[ 39% 52/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-encoding-prototext/pkg/google.golang.org/protobuf/encoding/prototext.a
-[ 40% 53/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-filedesc/pkg/google.golang.org/protobuf/internal/filedesc.a
-[ 41% 54/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-tag/pkg/google.golang.org/protobuf/internal/encoding/tag.a
-[ 41% 55/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint/pkg/github.com/google/blueprint.a
-[ 42% 56/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong/pkg/android/soong.a
-[ 43% 57/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-android-soongconfig/pkg/android/soong/android/soongconfig.a
-[ 44% 58/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-bootstrap-bpdoc/pkg/github.com/google/blueprint/bootstrap/bpdoc.a
-[ 45% 59/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-impl/pkg/google.golang.org/protobuf/internal/impl.a
-[ 45% 60/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-bootstrap/pkg/github.com/google/blueprint/bootstrap.a
-[ 46% 61/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-filetype/pkg/google.golang.org/protobuf/internal/filetype.a
-[ 47% 62/131] compile /home/runner/aera/out/host/linux-x86/bin/go/golang-protobuf-runtime-protoimpl/pkg/google.golang.org/protobuf/runtime/protoimpl.a
-[ 48% 63/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-android_team_proto/pkg/android/soong/android/team_proto.a
-[ 48% 64/131] compile /home/runner/aera/out/host/linux-x86/bin/go/sbox_proto/pkg/android/soong/cmd/sbox/sbox_proto.a
-[ 49% 65/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-ui-metrics_proto/pkg/android/soong/ui/metrics/metrics_proto.a
-[ 50% 66/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-android/pkg/android/soong/android.a
-[ 51% 67/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-aconfig-build_flags/pkg/android/soong/aconfig/build_flags.a
-[ 51% 68/131] compile /home/runner/aera/out/host/linux-x86/bin/go/kernel-config-soong-rules/pkg/android/soong/kernel/configs.a
-[ 52% 69/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-aidl-library/pkg/android/soong/aidl_library.a
-[ 53% 70/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-aconfig/pkg/android/soong/aconfig.a
-[ 54% 71/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-bloaty/pkg/android/soong/bloaty.a
-[ 54% 72/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-ci-tests/pkg/android/soong/ci_tests.a
-[ 55% 73/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-compliance/pkg/android/soong/compliance.a
-[ 56% 74/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-cc-config/pkg/android/soong/cc/config.a
-[ 57% 75/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-dexpreopt/pkg/android/soong/dexpreopt.a
-[ 58% 76/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-fuzz/pkg/android/soong/fuzz.a
-[ 58% 77/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-genrule/pkg/android/soong/genrule.a
-[ 59% 78/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-etc/pkg/android/soong/etc.a
-[ 60% 79/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-golang/pkg/android/soong/golang.a
-[ 61% 80/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-icu/pkg/android/soong/icu.a
-[ 61% 81/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-fs_config/pkg/android/soong/fs_config.a
-[ 62% 82/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-java-config/pkg/android/soong/java/config.a
-[ 63% 83/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-java-config-error_prone/pkg/android/soong/java/config/error_prone.a
-[ 64% 84/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-libchrome/pkg/android/soong/external/libchrome.a
-[ 64% 85/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-phony/pkg/android/soong/phony.a
-[ 65% 86/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-provenance/pkg/android/soong/provenance.a
-[ 66% 87/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-rust-config/pkg/android/soong/rust/config.a
-[ 67% 88/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-snapshot/pkg/android/soong/snapshot.a
-[ 67% 89/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-tradefed/pkg/android/soong/tradefed.a
-[ 68% 90/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-twrp-generator/pkg/twrp/soong/generator.a
-[ 69% 91/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-xml/pkg/android/soong/xml.a
-[ 70% 92/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-cc/pkg/android/soong/cc.a
-[ 70% 93/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-aera_host_defaults/pkg/bootable/recovery/aeraui/build.a
-[ 71% 94/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-android-sdk/pkg/android/soong/android_sdk.a
-[ 72% 95/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-bpf/pkg/android/soong/bpf.a
-[ 73% 96/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-clang/pkg/android/soong/external/clang.a
-[ 74% 97/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-kernel/pkg/android/soong/kernel.a
-[ 74% 98/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-libaosprecovery_defaults/pkg/bootable/recovery/libaosprecovery.a
-[ 75% 99/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-clang-prebuilts/pkg/android/soong/prebuilts/clang/host/linux-x86/clangprebuilts.a
-[ 76% 100/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-libbpf/pkg/android/soong/bpf/libbpf.a
-[ 77% 101/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-libminuitwrp_defaults/pkg/bootable/recovery/minuitwrp.a
-[ 77% 102/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-linkerconfig/pkg/android/soong/linkerconfig.a
-[ 78% 103/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-noto-fonts/pkg/android/soong/external/noto-fonts.a
-[ 79% 104/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-llvm/pkg/android/soong/external/llvm.a
-[ 80% 105/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-vold_defaults/pkg/system/vold.a
-[ 80% 106/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-python/pkg/android/soong/python.a
-[ 81% 107/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-rust/pkg/android/soong/rust.a
-[ 82% 108/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-rust-prebuilts/pkg/android/soong/prebuilts/rust/rustprebuilts.a
-[ 83% 109/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-java/pkg/android/soong/java.a
-[ 83% 110/131] compile /home/runner/aera/out/host/linux-x86/bin/go/hidl-soong-rules/pkg/android/soong/hidl.a
-[ 84% 111/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-api/pkg/android/soong/api.a
-[ 85% 112/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-aconfig-codegen/pkg/android/soong/aconfig/codegen.a
-[ 86% 113/131] compile /home/runner/aera/out/host/linux-x86/bin/go/aidl-soong-rules/pkg/android/soong/aidl.a
-[ 87% 114/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-csuite/pkg/android/soong/csuite.a
-[ 87% 115/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-sh/pkg/android/soong/sh.a
-[ 88% 116/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-suite-harness/pkg/android/soong/tradefed/suite_harness.a
-[ 89% 117/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-systemfeatures/pkg/android/soong/systemfeatures.a
-[ 90% 118/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-filesystem/pkg/android/soong/filesystem.a
-[ 90% 119/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-tradefed-modules/pkg/android/soong/tradefed_modules.a
-[ 91% 120/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-sysprop/pkg/android/soong/sysprop.a
-[ 92% 121/131] compile /home/runner/aera/out/host/linux-x86/bin/go/xsdc-soong-rules/pkg/android/soong/xsdc.a
-[ 93% 122/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-fsgen/pkg/android/soong/fsgen.a
-[ 93% 123/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-selinux/pkg/android/soong/selinux.a
-[ 94% 124/131] compile /home/runner/aera/out/host/linux-x86/bin/go/vintf-compatibility-matrix-soong-rules/pkg/android/soong/vintf-compatibility-matrix.a
-[ 95% 125/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-apex/pkg/android/soong/apex.a
-[ 96% 126/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-art/pkg/android/soong/art.a
-[ 96% 127/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong-sdk/pkg/android/soong/sdk.a
-[ 97% 128/131] compile /home/runner/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
-[ 98% 129/131] link /home/runner/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build
-[ 99% 130/131] cp /home/runner/aera/out/host/linux-x86/bin/soong_build
-[100% 131/131] analyzing Android.bp files and generating ninja file at /home/runner/aera/out/soong/build.twrp_cerro.ninja
-Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
-Warning: Module 'androidx.test.uiautomator_uiautomator' depends on non-existing optional_uses_libs 'com.android.extensions.xr'
-Warning: Module 'androidx.wear_wear' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.compose_compose-foundation' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface-complications-data' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface' depends on non-existing optional_uses_libs 'wear-sdk'
-/home/runner/aera/out/build-twrp_cerro-cleanspec.ninja is missing, regenerating...
-/home/runner/aera/out/build-twrp_cerro.ninja is missing, regenerating...
-[100% 132/132] initializing legacy Make module parser ...
-[ 92% 133/144] including /home/runner/aera/out/soong/installs-twrp_cerro.mk ...
-[ 93% 134/144] including /home/runner/aera/out/soong/Android-twrp_cerro.mk ...
-[ 93% 135/144] including build/make/target/board/android-info.mk ...
-[ 94% 136/144] including art/Android.mk ...
-[ 95% 137/144] including bootable/recovery/Android.mk ...
-bootable/recovery/prebuilt/Android.mk:486: warning: vendor_hw:  bootable/recovery/prebuilt/relink.sh /home/runner/aera/out/target/product/cerro/recovery/root/vendor/bin/hw 
-[ 95% 138/144] including device/qcom/twrp-common/Android.mk ...
-[ 96% 139/144] including external/magisk-prebuilt/Android.mk ...
-[ 97% 140/144] including hardware/qcom/wlan/Android.mk ...
-[ 97% 141/144] including vendor/twrp/Android.mk ...
-[ 98% 142/144] including /home/runner/aera/out/soong/late-twrp_cerro.mk ...
-[ 99% 143/144] finishing legacy Make module parsing ...
+[  2% 719/25640] //system/logging/liblog:liblog clang++ pmsg_reader.cpp (priority: 55)
+[  2% 720/25640] //system/logging/liblog:liblog clang++ event_tag_map.cpp (priority: 55)
+[  2% 721/25640] //system/logging/liblog:liblog clang++ pmsg_writer.cpp (priority: 55)
+[  2% 722/25640] //system/logging/liblog:liblog clang++ logd_reader.cpp (priority: 55)
+[  2% 723/25640] //system/logging/liblog:liblog clang++ logd_writer.cpp (priority: 55)
+[  2% 724/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/any_lite.cc [linux_glibc] (priority: 55)
+[  2% 725/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/arenaz_sampler.cc [linux_glibc] (priority: 55)
+[  2% 726/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/arena.cc [linux_glibc] (priority: 55)
+[  2% 727/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/arenastring.cc [linux_glibc] (priority: 55)
+[  2% 728/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/generated_enum_util.cc [linux_glibc] (priority: 55)
+[  2% 729/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/generated_message_util.cc [linux_glibc] (priority: 55)
+[  2% 730/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/generated_message_tctable_lite.cc [linux_glibc] (priority: 55)
+[  2% 731/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/extension_set.cc [linux_glibc] (priority: 55)
+[  2% 732/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/implicit_weak_message.cc [linux_glibc] (priority: 55)
+[  2% 733/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/io_win32.cc [linux_glibc] (priority: 55)
+[  2% 734/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/inlined_string_field.cc [linux_glibc] (priority: 55)
+[  2% 735/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/coded_stream.cc [linux_glibc] (priority: 55)
+[  2% 736/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/strtod.cc [linux_glibc] (priority: 55)
+[  2% 737/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/zero_copy_stream.cc [linux_glibc] (priority: 55)
+[  2% 738/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/zero_copy_stream_impl.cc [linux_glibc] (priority: 55)
+[  2% 739/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/zero_copy_stream_impl_lite.cc [linux_glibc] (priority: 55)
+[  2% 740/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/map.cc [linux_glibc] (priority: 55)
+[  2% 741/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/message_lite.cc [linux_glibc] (priority: 55)
+[  2% 742/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/parse_context.cc [linux_glibc] (priority: 55)
+[  2% 743/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/repeated_ptr_field.cc [linux_glibc] (priority: 55)
+[  2% 744/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/bytestream.cc [linux_glibc] (priority: 55)
+[  2% 745/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/repeated_field.cc [linux_glibc] (priority: 55)
+[  2% 746/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/common.cc [linux_glibc] (priority: 55)
+[  2% 747/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/int128.cc [linux_glibc] (priority: 55)
+[  2% 748/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/status.cc [linux_glibc] (priority: 55)
+[  2% 749/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/statusor.cc [linux_glibc] (priority: 55)
+[  2% 750/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/stringpiece.cc [linux_glibc] (priority: 55)
+[  2% 751/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/stringprintf.cc [linux_glibc] (priority: 55)
+[  2% 752/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/structurally_valid.cc [linux_glibc] (priority: 55)
+[  2% 753/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/time.cc [linux_glibc] (priority: 55)
+[  2% 754/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/strutil.cc [linux_glibc] (priority: 55)
+[  2% 755/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/wire_format_lite.cc [linux_glibc] (priority: 55)
+[  2% 756/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/any.cc [linux_glibc] (priority: 55)
+[  2% 757/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/any.pb.cc [linux_glibc] (priority: 55)
+[  2% 758/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/api.pb.cc [linux_glibc] (priority: 55)
+[  2% 759/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/importer.cc [linux_glibc] (priority: 55)
+[  2% 760/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/parser.cc [linux_glibc] (priority: 55)
+[  2% 761/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/descriptor.pb.cc [linux_glibc] (priority: 55)
+[  2% 762/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/descriptor_database.cc [linux_glibc] (priority: 55)
+[  2% 763/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/duration.pb.cc [linux_glibc] (priority: 55)
+[  2% 764/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/empty.pb.cc [linux_glibc] (priority: 55)
+[  2% 765/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/dynamic_message.cc [linux_glibc] (priority: 55)
+[  2% 766/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/extension_set_heavy.cc [linux_glibc] (priority: 55)
+[  2% 767/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/field_mask.pb.cc [linux_glibc] (priority: 55)
+[  2% 768/25640] //external/sqlite/dist:libsqlite clang sqlite-autoconf-3440300/sqlite3.c [linux_glibc] (priority: 71)
+[  2% 769/25640] //external/sqlite/dist:libsqlite link libsqlite.so [linux_glibc] (priority: 70)
+[  3% 770/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/descriptor.cc [linux_glibc] (priority: 55)
+[  3% 771/25640] host Prebuilt: libsqlite (/home/runner/aera/out/host/linux-x86/obj/SHARED_LIBRARIES/libsqlite_intermediates/libsqlite.so) (priority: 67)
+[  3% 772/25640] Install: /home/runner/aera/out/host/linux-x86/lib64/libsqlite.so (priority: 66)
+[  3% 773/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/generated_message_bases.cc [linux_glibc] (priority: 55)
+[  3% 774/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/gzip_stream.cc [linux_glibc] (priority: 55)
+[  3% 775/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/generated_message_tctable_full.cc [linux_glibc] (priority: 55)
+[  3% 776/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/generated_message_reflection.cc [linux_glibc] (priority: 55)
+[  3% 777/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/tokenizer.cc [linux_glibc] (priority: 55)
+[  3% 778/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/io/printer.cc [linux_glibc] (priority: 55)
+[  3% 779/25640] //prebuilts/build-tools:py3-stdlib-prebuilt Precompile the python sources of py3-stdlib-prebuilt [linux_glibc] (priority: 69)
+[  3% 780/25640] //build/soong/scripts:rustc_linker Precompile the python sources of rustc_linker [linux_glibc] (priority: 68)
+[  3% 781/25640] //build/soong/scripts:rustc_linker embedded python archive [linux_glibc] (priority: 67)
+[  3% 782/25640] host Prebuilt: rustc_linker (/home/runner/aera/out/host/linux-x86/obj/EXECUTABLES/rustc_linker_intermediates/rustc_linker) (priority: 66)
+[  3% 783/25640] Install: /home/runner/aera/out/host/linux-x86/bin/rustc_linker (priority: 65)
+[  3% 784/25640] //external/rust/android-crates-io/crates/unicode-ident:libunicode_ident rustc src/lib.rs [linux_glibc] (priority: 64)
+[  3% 785/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/reflection_ops.cc [linux_glibc] (priority: 55)
+[  3% 786/25640] //build/soong/cc/ndkstubgen:ndkstubgen Precompile the python sources of ndkstubgen [linux_glibc] (priority: 62)
+[  3% 787/25640] //build/soong/cc/symbolfile:symbolfile Precompile the python sources of symbolfile [linux_glibc] (priority: 62)
+[  3% 788/25640] //build/soong/cc/ndkstubgen:ndkstubgen embedded python archive [linux_glibc] (priority: 61)
+[  3% 789/25640] host Prebuilt: ndkstubgen (/home/runner/aera/out/host/linux-x86/obj/EXECUTABLES/ndkstubgen_intermediates/ndkstubgen) (priority: 60)
+[  3% 790/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/map_field.cc [linux_glibc] (priority: 55)
+[  3% 791/25640] //external/rust/android-crates-io/crates/cfg-if:libcfg_if rustc src/lib.rs [linux_glibc] (priority: 60)
+[  3% 792/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/message.cc [linux_glibc] (priority: 55)
+[  3% 793/25640] //external/rust/android-crates-io/crates/byteorder:libbyteorder rustc src/lib.rs [linux_glibc] (priority: 60)
+[  3% 794/25640] Install: /home/runner/aera/out/host/linux-x86/bin/ndkstubgen (priority: 59)
+[  3% 795/25640] //external/rust/android-crates-io/crates/bitflags:libbitflags rustc src/lib.rs [linux_glibc] (priority: 58)
+[  3% 796/25640] //external/rust/android-crates-io/crates/once_cell:libonce_cell rustc src/lib.rs [linux_glibc] (priority: 59)
+[  3% 797/25640] //bionic/libc:libc generate stubs libc.map.txt (priority: 58)
+[  3% 798/25640] //bionic/libdl:libdl generate stubs libdl.map.txt (priority: 58)
+[  3% 799/25640] //bionic/libm:libm generate stubs libm.map.txt (priority: 58)
+[  3% 800/25640] //bionic/libc:libc clang stub.c (priority: 57)
+[  3% 801/25640] //bionic/libdl:libdl clang stub.c (priority: 57)
+[  3% 802/25640] //external/rust/android-crates-io/crates/either:libeither rustc src/lib.rs [linux_glibc] (priority: 57)
+[  3% 803/25640] //external/rust/android-crates-io/crates/fastrand:libfastrand rustc src/lib.rs [linux_glibc] (priority: 57)
+[  3% 804/25640] //bionic/libm:libm clang stub.c (priority: 57)
+[  3% 805/25640] //external/rust/android-crates-io/crates/libc:liblibc rustc src/lib.rs [linux_glibc] (priority: 60)
+[  3% 806/25640] //external/rust/android-crates-io/crates/getrandom:libgetrandom rustc src/lib.rs [linux_glibc] (priority: 59)
+[  3% 807/25640] //external/rust/android-crates-io/crates/errno:liberrno rustc src/lib.rs [linux_glibc] (priority: 58)
+[  3% 808/25640] //external/rust/android-crates-io/crates/memchr:libmemchr rustc src/lib.rs [linux_glibc] (priority: 57)
+[  3% 809/25640] //external/rust/android-crates-io/crates/proc-macro2:libproc_macro2 rustc src/lib.rs [linux_glibc] (priority: 63)
+[  3% 810/25640] //external/rust/android-crates-io/crates/quote:libquote rustc src/lib.rs [linux_glibc] (priority: 62)
+[  3% 811/25640] //external/rust/android-crates-io/crates/rustix:librustix rustc src/lib.rs [linux_glibc] (priority: 57)
+[  3% 812/25640] //external/rust/android-crates-io/crates/aho-corasick:libaho_corasick rustc src/lib.rs [linux_glibc] (priority: 56)
+[  3% 813/25640] //bionic/libc:libc link libc.so (priority: 56)
+[  3% 814/25640] //bionic/libdl:libdl link libdl.so (priority: 56)
+[  3% 815/25640] //external/rust/android-crates-io/crates/log:liblog_rust rustc src/lib.rs [linux_glibc] (priority: 56)
+[  3% 816/25640] //bionic/libm:libm link libm.so (priority: 56)
+[  3% 817/25640] //external/rust/android-crates-io/crates/anyhow:libanyhow rustc src/lib.rs [linux_glibc] (priority: 56)
+[  3% 818/25640] //external/rust/android-crates-io/crates/tempfile:libtempfile rustc src/lib.rs [linux_glibc] (priority: 56)
+[  3% 819/25640] //external/rust/android-crates-io/crates/which:libwhich rustc src/lib.rs [linux_glibc] (priority: 56)
+[  3% 820/25640] //bionic/libc:libc generate toc libc.so (priority: 55)
+[  3% 821/25640] //bionic/libdl:libdl generate toc libdl.so (priority: 55)
+[  3% 822/25640] //bionic/libm:libm generate toc libm.so (priority: 55)
+[  3% 823/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/service.cc [linux_glibc] (priority: 55)
+[  3% 824/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/source_context.pb.cc [linux_glibc] (priority: 55)
+[  3% 825/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/struct.pb.cc [linux_glibc] (priority: 55)
+[  3% 826/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/stubs/substitute.cc [linux_glibc] (priority: 55)
+[  3% 827/25640] //external/rust/android-crates-io/crates/regex-syntax:libregex_syntax rustc src/lib.rs [linux_glibc] (priority: 56)
+[  3% 828/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/text_format.cc [linux_glibc] (priority: 55)
+[  3% 829/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/timestamp.pb.cc [linux_glibc] (priority: 55)
+[  3% 830/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/type.pb.cc [linux_glibc] (priority: 55)
+[  3% 831/25640] //prebuilts/rust:libcore.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/core/src/lib.rs (priority: 58)
+[  3% 832/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/unknown_field_set.cc [linux_glibc] (priority: 55)
+[  3% 833/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/util/delimited_message_util.cc [linux_glibc] (priority: 55)
+[  3% 834/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/util/field_comparator.cc [linux_glibc] (priority: 55)
+[  3% 835/25640] //prebuilts/rust:libcompiler_builtins.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/compiler_builtins/src/lib.rs (priority: 57)
+[  3% 836/25640] //prebuilts/rust:libcfg_if.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/cfg-if/src/lib.rs (priority: 56)
+[  3% 837/25640] //prebuilts/rust:liblibc.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/libc/src/lib.rs (priority: 56)
+[  3% 838/25640] //external/protobuf:libprotoc clang++ src/google/protobuf/util/field_mask_util.cc [linux_glibc] (priority: 55)
