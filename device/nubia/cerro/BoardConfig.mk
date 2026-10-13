@@ -72,3 +72,23 @@ BOARD_USES_QCOM_FBE_DECRYPTION := true
 BOARD_USES_METADATA_PARTITION := true
 TW_USE_FSCRYPT_POLICY := 2
 TW_PREPARE_DATA_MEDIA_EARLY := true
+
+# Libraries the recovery binary and the vendor HALs link against; without them
+# /system/bin/recovery fails at load time (libsysutils) and the splash never goes away.
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libdmabufheap.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libnetutils.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libsysutils.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libnl.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libexpat.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libfmq.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libcgrouprc.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libprocinfo.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libtinyalsa.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.common-V2-ndk.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.common.fmq-V1-ndk.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.health-V2-ndk.so

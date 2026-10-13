@@ -1,0 +1,32 @@
+# Device init for cerro (written from scratch; behaviour matches what the working
+# OrangeFox ramdisk does on this device).
+
+on early-init
+    # recovery policy is not complete for this vendor stack
+    write /sys/fs/selinux/enforce 0
+
+on init
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    write /sys/class/backlight/panel0-backlight/brightness 800
+    start vendor.qseecomd
+
+on fs
+    mkdir /mnt/vendor/persist
+    mount ext4 /dev/block/bootdevice/by-name/persist /mnt/vendor/persist ro
+    start vendor.boot-qti
+    start vendor.health-default
+    mkdir /vendor/firmware_mnt
+    mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /vendor/firmware_mnt ro
+
+on property:vendor.sys.listeners.registered=true
+    start vendor.ssgtzd
+    start vendor.gatekeeper_default
+    start vendor.keymint-qti
+
+on property:twrp.all.users.decrypted=true
+    stop keystore2
+    stop vendor.keymint-qti
+    stop vendor.gatekeeper_default
+    stop vendor.ssgtzd
+    stop vendor.qseecomd
