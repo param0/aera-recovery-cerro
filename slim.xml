@@ -91,6 +91,5 @@
   <remove-project name="platform/test/mlts/benchmark" optional="true"/>
   <remove-project name="platform/test/mlts/models" optional="true"/>
   <remove-project name="platform/test/robolectric-extensions" optional="true"/>
-  <remove-project name="platform/test/vts-testcase/hal" optional="true"/>
   <remove-project name="platform/platform_testing" optional="true"/>
 </manifest>
