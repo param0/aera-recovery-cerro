@@ -90,7 +90,6 @@
   <remove-project name="platform/tools/security" optional="true"/>
   <remove-project name="platform/tools/external/fat32lib" optional="true"/>
   <remove-project name="platform/test/suite_harness" optional="true"/>
-  <remove-project name="platform/test/app_compat/csuite" optional="true"/>
   <remove-project name="platform/test/cts-root" optional="true"/>
   <remove-project name="platform/test/mlts/benchmark" optional="true"/>
   <remove-project name="platform/test/mlts/models" optional="true"/>
