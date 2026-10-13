@@ -10,6 +10,9 @@ TARGET_BOARD_PLATFORM := pineapple
 TARGET_BOOTLOADER_BOARD_NAME := pineapple
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := false
+# real /vendor dir in the ramdisk (blobs live in recovery/root/vendor)
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 # no kernel build: recovery is ramdisk-only
 TARGET_NO_KERNEL_OVERRIDE := true
 
