@@ -1,10 +1,10 @@
-== 21:17:48 root 81G mem 2453M swap 2095M
+== 21:19:49 root 81G mem 837M swap 8112M
 %MEM   RSS COMMAND
-76.4 12524040 soong_build
- 0.6 108624 provjobd2379771
- 0.3 51052 Runner.Worker
+80.4 13169304 soong_build
+ 0.6 98404 provjobd2379771
  0.2 43684 multipathd
- 0.2 33364 Runner.Listener
+ 0.2 41684 Runner.Worker
+ 0.1 22380 python3
 
 [  8% 11/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-depset/pkg/github.com/google/blueprint/depset.a
 [  9% 12/131] compile /home/runner/aera/out/host/linux-x86/bin/go/blueprint-pathtools/pkg/github.com/google/blueprint/pathtools.a
