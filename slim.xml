@@ -25,14 +25,12 @@
   <remove-project name="platform/prebuilts/ndk" optional="true"/>
   <remove-project name="platform/prebuilts/qemu-kernel" optional="true"/>
   <remove-project name="platform/prebuilts/gradle-plugin" optional="true"/>
-  <remove-project name="platform/prebuilts/jdk/jdk8" optional="true"/>
   <remove-project name="platform/prebuilts/clang/host/darwin-x86" optional="true"/>
   <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" optional="true"/>
   <remove-project name="platform/prebuilts/go/darwin-x86" optional="true"/>
   <remove-project name="platform/prebuilts/cmake/darwin-x86" optional="true"/>
   <remove-project name="platform/prebuilts/android-emulator-build/qemu" optional="true"/>
   <remove-project name="platform/prebuilts/fuchsia_sdk" optional="true"/>
-  <remove-project name="platform/prebuilts/runtime" optional="true"/>
   <remove-project name="platform/prebuilts/abi-dumps/ndk" optional="true"/>
   <remove-project name="platform/prebuilts/abi-dumps/platform" optional="true"/>
   <remove-project name="platform/prebuilts/abi-dumps/vndk" optional="true"/>
