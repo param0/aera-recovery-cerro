@@ -19,3 +19,6 @@ PRODUCT_PROPERTY_OVERRIDES += ro.bootimage.build.date.utc=0
 # no kernel in this tree: skip kernel-version VINTF extraction
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 PRODUCT_ENFORCE_VINTF_MANIFEST := false
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/twrp.flags:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/twrp.flags
